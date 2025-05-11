@@ -12,8 +12,11 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { useNavigate } from 'react-router-dom';
 
 const Footer: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <Box
       sx={{
@@ -51,27 +54,63 @@ const Footer: React.FC = () => {
             <Typography variant="h6" gutterBottom>
               For Patients
             </Typography>
-            <Link href="#" color="inherit" display="block" sx={{ mb: 1 }}>
+            <Link 
+              component="button" 
+              color="inherit" 
+              display="block" 
+              sx={{ mb: 1 }}
+              onClick={() => navigate('/location')}
+            >
               Search Doctors
             </Link>
-            <Link href="#" color="inherit" display="block" sx={{ mb: 1 }}>
+            <Link 
+              component="button" 
+              color="inherit" 
+              display="block" 
+              sx={{ mb: 1 }}
+              onClick={() => navigate('/health-issues')}
+            >
               Book Appointment
             </Link>
-            <Link href="#" color="inherit" display="block" sx={{ mb: 1 }}>
-              Health Blog
+            <Link 
+              component="button" 
+              color="inherit" 
+              display="block" 
+              sx={{ mb: 1 }}
+              onClick={() => navigate('/login')}
+            >
+              Login
             </Link>
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h6" gutterBottom>
               For Doctors
             </Typography>
-            <Link href="#" color="inherit" display="block" sx={{ mb: 1 }}>
+            <Link 
+              component="button" 
+              color="inherit" 
+              display="block" 
+              sx={{ mb: 1 }}
+              onClick={() => navigate('/doctor-signup')}
+            >
               Join as a Doctor
             </Link>
-            <Link href="#" color="inherit" display="block" sx={{ mb: 1 }}>
-              Doctor Dashboard
+            <Link 
+              component="button" 
+              color="inherit" 
+              display="block" 
+              sx={{ mb: 1 }}
+              onClick={() => navigate('/doctor-login')}
+            >
+              Doctor Login
             </Link>
-            <Link href="#" color="inherit" display="block" sx={{ mb: 1 }}>
+            <Link 
+              component="button" 
+              color="inherit" 
+              display="block" 
+              sx={{ mb: 1 }}
+              onClick={() => navigate('/health-issues')}
+            >
               Resources
             </Link>
           </Grid>

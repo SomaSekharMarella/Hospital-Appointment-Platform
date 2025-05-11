@@ -12,6 +12,9 @@ import HealthIssuesPage from './pages/HealthIssuesPage';
 import DoctorDetailsPage from './pages/DoctorDetailsPage';
 import BookingFormPage from './pages/BookingFormPage';
 import SuccessPage from './pages/SuccessPage';
+import DoctorLoginPage from './pages/DoctorLoginPage';
+import DoctorSignupPage from './pages/DoctorSignupPage';
+import DoctorDashboard from './pages/DoctorDashboard';
 
 const App: React.FC = () => {
   return (
@@ -30,6 +33,9 @@ const App: React.FC = () => {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/login" element={<LoginPage />} />
+              <Route path="/doctor-login" element={<DoctorLoginPage />} />
+              <Route path="/doctor-signup" element={<DoctorSignupPage />} />
+              <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/location" element={<LocationPage />} />
               <Route path="/health-issues" element={<HealthIssuesPage />} />
